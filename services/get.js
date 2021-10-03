@@ -44,7 +44,6 @@ export function getProductByCategory(idCategory) {
       productosItem.push(productos[product]);
     }
   }
-
   return productosItem;
 }
 

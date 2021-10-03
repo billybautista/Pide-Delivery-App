@@ -40,6 +40,6 @@ export default function Tabs({setMenu, menu}) {
 const styles = StyleSheet.create({
   active: {
     backgroundColor: '#00AA9D',
-    height: 4,
+    height: 3,
   },
 });

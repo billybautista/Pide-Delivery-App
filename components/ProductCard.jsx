@@ -1,7 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import {View, Text, TouchableOpacity, Image, Dimensions} from 'react-native';
 import Heart from 'react-native-vector-icons/AntDesign';
 import Cart from 'react-native-vector-icons/AntDesign';
+
+const {width, height} = Dimensions.get('window');
 
 export default function ProductCard({desc, nombre, precio, imagen}) {
   return (
@@ -18,11 +20,16 @@ export default function ProductCard({desc, nombre, precio, imagen}) {
           source={{uri: imagen}}
           style={{width: 120, height: 120, borderRadius: 10}}
         />
-        <View style={{width: 180, marginLeft: 15}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold', marginTop: 5}}>
+        <View
+          style={{
+            width: 180,
+            marginLeft: 15,
+            marginVertical: 5,
+          }}>
+          <Text style={{fontSize: 16, fontWeight: 'bold', marginTop: 5}}>
             {nombre}
           </Text>
-          <Text style={{fontSize: 14}}>{desc}</Text>
+          <Text style={{fontSize: 14, height: 50}}>{desc}</Text>
           <View
             style={{
               backgroundColor: '#A763AF',
@@ -44,7 +51,7 @@ export default function ProductCard({desc, nombre, precio, imagen}) {
         </View>
         <View
           style={{
-            marginLeft: 15,
+            marginLeft: width < 400 ? 0 : width - (width - 15),
             justifyContent: 'space-between',
             marginVertical: 10,
             alignItems: 'center',

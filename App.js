@@ -17,12 +17,11 @@ function Home({navigation}) {
 
   return (
     <View>
-      <ScrollView vertical>
-        <Header img={img} navigation={navigation} />
-        <Image source={{uri: getBanner()}} style={{height: 120}} />
-        <Tabs setMenu={setMenu} menu={menu} />
-        <Products menu={menu} />
-      </ScrollView>
+      <Header img={img} navigation={navigation} />
+      <Image source={{uri: getBanner()}} style={{height: 120}} />
+
+      <Tabs setMenu={setMenu} menu={menu} />
+      <Products menu={menu} />
     </View>
   );
 }
