@@ -2,6 +2,12 @@ import React from 'react';
 import {View, TouchableOpacity, Image, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import Icon1 from 'react-native-vector-icons/FontAwesome';
+import PropTypes from 'prop-types';
+
+/**
+ * Este componente solo muestra el logo, los iconos y se le pasa por props navigation,
+ * para que el onPress de los iconos tenga acceso al  DrawerScreen
+ */
 
 export default function Header({img, navigation}) {
   return (
@@ -34,6 +40,13 @@ export default function Header({img, navigation}) {
     </View>
   );
 }
+
+Header.propTypes = {
+  img: PropTypes.any.isRequired,
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }),
+};
 
 const styles = StyleSheet.create({
   container: {

@@ -5,7 +5,12 @@ import {
   getNameCategory,
   getIdbyCategory,
 } from '../services/get';
+import PropTypes from 'prop-types';
 
+/**
+ * Este componente sirve para mostrar las categorias asociadas al comercio en forma de Top tabs,
+ * además recibe setMenu, para indicar que tab fue presionada
+ */
 export default function Tabs({setMenu, menu}) {
   const categoryList = getNameCategory(getIdCategories());
 
@@ -15,15 +20,7 @@ export default function Tabs({setMenu, menu}) {
 
   return (
     <View>
-      <View
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginHorizontal: 20,
-          marginVertical: 10,
-          height: 30,
-        }}>
+      <View style={styles.container}>
         {categoryList.map((i, key) => (
           <TouchableOpacity
             key={key}
@@ -37,7 +34,20 @@ export default function Tabs({setMenu, menu}) {
   );
 }
 
+Tabs.propTypes = {
+  menu: PropTypes.array.isRequired,
+  setMenu: PropTypes.func.isRequired,
+};
+
 const styles = StyleSheet.create({
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+    marginVertical: 10,
+    height: 30,
+  },
   active: {
     backgroundColor: '#00AA9D',
     height: 3,
