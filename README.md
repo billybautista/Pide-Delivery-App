@@ -6,7 +6,7 @@
 </div>
             
 ### Instructions: 
-**IMPORTANTE:** Para ejecutar la app, se debe posicionar en la carpeta `App`
+**IMPORTANTE:** Para ejecutar la app, se debe corer los siguientes comandos
 
 ```bash
   npm install
