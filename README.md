@@ -15,5 +15,3 @@
 
 # APK 
 <a href="https://drive.google.com/file/d/1AFqN3vsWmR9dPiQbmmntFU1iA2hbKBKS/view?usp=sharing" target="_blank">Pide-Delivery-App</a>
-    
-<a href="javascript:window.open('https://www.google.es','','toolbar=yes');void 0">Nueva Instancia</a>
