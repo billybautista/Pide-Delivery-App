@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {
-  getIdCategories,
-  getNameCategory,
-  getIdbyCategory,
+  getIdCategoriesBusiness,
+  getNameCategories,
+  getIdCategory,
 } from '../services/get';
 import PropTypes from 'prop-types';
 
@@ -12,21 +12,19 @@ import PropTypes from 'prop-types';
  * además recibe setMenu, para indicar que tab fue presionada
  */
 export default function Tabs({setMenu, menu}) {
-  const categoryList = getNameCategory(getIdCategories());
+  const categoryList = getNameCategories(getIdCategoriesBusiness());
 
   useEffect(() => {
-    setMenu(getIdbyCategory(categoryList[0]));
+    setMenu(getIdCategory(categoryList[0]));
   }, []);
 
   return (
     <View>
       <View style={styles.container}>
         {categoryList.map((i, key) => (
-          <TouchableOpacity
-            key={key}
-            onPress={() => setMenu(getIdbyCategory(i))}>
+          <TouchableOpacity key={key} onPress={() => setMenu(getIdCategory(i))}>
             <Text style={{fontSize: 18}}>{i}</Text>
-            <View style={getIdbyCategory(i) == menu && styles.active} />
+            <View style={getIdCategory(i) == menu && styles.active} />
           </TouchableOpacity>
         ))}
       </View>

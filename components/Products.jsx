@@ -1,15 +1,14 @@
 import React from 'react';
 import {View, ScrollView} from 'react-native';
 import ProductCard from './ProductCard';
-import {getProductByCategory} from '../services/get';
+import {getProductsByCategory} from '../services/get';
 import PropTypes from 'prop-types';
 
 /**
  * Este componente va mostrar los productos dependiendo del Tab seleccionado
  */
-
 export default function Products({menu}) {
-  const product = getProductByCategory(menu);
+  const product = getProductsByCategory(menu);
   return (
     <ScrollView vertical>
       {product.map((i, key) => (

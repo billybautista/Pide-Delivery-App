@@ -4,14 +4,14 @@ import data from '../data/Test_Data.json';
  * Trae el id de las categorias asociadas del comercio
  * @return {Array} retorna un array de IDs
  */
-export function getIdCategories() {
-  const productos = data.Productos;
+export function getIdCategoriesBusiness() {
+  const products = data.Productos;
   const categories = [];
-  for (const category in productos) {
-    categories.push(productos[category].idCategoria);
+  for (const category in products) {
+    categories.push(products[category].idCategoria);
   }
-  const idCategory = [...new Set(categories)];
-  return idCategory;
+  const idsCategories = [...new Set(categories)];
+  return idsCategories;
 }
 
 /**
@@ -19,15 +19,15 @@ export function getIdCategories() {
  * @param {Array} Ids array de Ids de las Categorias
  * @return {Array} retorna un array con el nombre de las categorias
  */
-export function getNameCategory(array) {
+export function getNameCategories(array) {
   const categories = data.Categorias;
-  const categoryName = [];
+  const categoryNames = [];
   for (const name in categories) {
     if (array.includes(categories[name].idCategoria)) {
-      categoryName.push(categories[name].nombreCat);
+      categoryNames.push(categories[name].nombreCat);
     }
   }
-  return categoryName;
+  return categoryNames;
 }
 
 /**
@@ -35,7 +35,7 @@ export function getNameCategory(array) {
  * @param {String} nombre El nombre de la categoria
  * @return {Number} retorna el id de la categoria
  */
-export function getIdbyCategory(name) {
+export function getIdCategory(name) {
   const categories = data.Categorias;
   const array = [];
   array.push(name);
@@ -53,17 +53,17 @@ export function getIdbyCategory(name) {
  * @param {Number} id
  * @return {Array} retorna un array de productos filtrados por el id de la categoria
  */
-export function getProductByCategory(idCategory) {
-  const productos = data.Productos;
+export function getProductsByCategory(idCategory) {
+  const products = data.Productos;
   const array = [];
   array.push(idCategory);
-  const productosItem = [];
-  for (const product in productos) {
-    if (array.includes(productos[product].idCategoria)) {
-      productosItem.push(productos[product]);
+  const listProducts = [];
+  for (const product in products) {
+    if (array.includes(products[product].idCategoria)) {
+      listProducts.push(products[product]);
     }
   }
-  return productosItem;
+  return listProducts;
 }
 
 /**

@@ -11,13 +11,12 @@ import Heart from 'react-native-vector-icons/AntDesign';
 import Cart from 'react-native-vector-icons/AntDesign';
 import PropTypes from 'prop-types';
 
-const {width} = Dimensions.get('window');
-
 /**
  * Este componente sirve para mostrar en un card, el nombre, descripción,
  * precio y la imagen de un producto
  */
 
+const {width} = Dimensions.get('window');
 export default function ProductCard({description, name, price, image}) {
   return (
     <View style={styles.container}>
