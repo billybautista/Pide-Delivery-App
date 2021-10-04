@@ -33,8 +33,8 @@ export default function Tabs({setMenu, menu}) {
 }
 
 Tabs.propTypes = {
-  menu: PropTypes.array.isRequired,
-  setMenu: PropTypes.func.isRequired,
+  menu: PropTypes.number,
+  setMenu: PropTypes.func,
 };
 
 const styles = StyleSheet.create({

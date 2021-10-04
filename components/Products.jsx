@@ -26,5 +26,5 @@ export default function Products({menu}) {
 }
 
 Products.prototypes = {
-  menu: PropTypes.array.isRequired,
+  menu: PropTypes.number,
 };

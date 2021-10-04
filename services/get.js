@@ -33,7 +33,7 @@ export function getNameCategories(array) {
 /**
  * Trae el nombre de la categoria pasemos su id
  * @param {String} nombre El nombre de la categoria
- * @return {Number} retorna el id de la categoria
+ * @return {Array} retorna el id de la categoria
  */
 export function getIdCategory(name) {
   const categories = data.Categorias;
