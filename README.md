@@ -13,3 +13,6 @@
   npx react-native run-android
 ```
 
+# APK 
+<a href="https://drive.google.com/file/d/1AFqN3vsWmR9dPiQbmmntFU1iA2hbKBKS/view?usp=sharing">Pide-Delivery</a>
+    
